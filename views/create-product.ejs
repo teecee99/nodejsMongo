@@ -1,0 +1,46 @@
+<%- include templates/header %>
+<%- include templates/menu %>
+
+<div class="main">
+    <div class="container">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/product">Product</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add New Product</li>
+            </ol>
+        </nav>
+        <% if(locals.errors) { %>
+        <ul class="alert alert-danger pl-30">
+            <% Object.values(errors).forEach(function(error){ %>
+            <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+        <% } %>
+
+        <%- messages() %>
+
+        <form action="/product/create" method="post">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อสินค้า...">
+            </div>
+
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="ราคา...">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+    </div>
+</div>
+
+<%- include templates/footer %>

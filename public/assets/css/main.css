@@ -1,0 +1,35 @@
+body {
+  background-color: #e3f2fd;
+}
+
+.navber-bg {
+  background-color: lightblue;
+}
+
+.container{
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
